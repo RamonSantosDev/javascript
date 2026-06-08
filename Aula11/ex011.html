@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Pais</h1>
+    Qual é o seu país? <input type="text" name="txtps" id="txtps">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+            var txtp = window.document.getElementById('txtps')
+            var pais = txtp.value.trim().toLowerCase() // tira os espaços e coloca tudo em minuscula
+            var res = window.document.getElementById('res')
+            if (pais === 'brasil'){
+                res.innerHTML = '<p>Brasileiro</p>'
+            }else{
+                res.innerHTML = '<p>Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
